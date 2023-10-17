@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo Test</title>
+    </head>
+    <body>
+        <h1>List your task here..</h1>
+        <h1> <%= listTitle %> </h1>
+
+
+        <%= newtaskNames.forEach((task) => { %>
+            <form action="/delete" method="post">
+                <div>
+                    <input type="checkbox" name="checkbox" value="<%= task._id %>" onchange="this.form.submit()">
+                    <p><%= task.name %> </p>
+                    </div>
+                </form>
+            
+        <%  }) %>
+
+
+
+        
+
+        <form class="task" action="/" method="post">
+            <input type="text" name="newTask" placeholder="New Task">
+            <button type="submit" name="list" value=<%= listTitle %>>Add</button>
+        </form>
+    </body>
+</html>

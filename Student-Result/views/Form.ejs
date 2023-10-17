@@ -1,0 +1,15 @@
+<h1>Student Record</h1>
+<form action="/students" method="POST">
+  <input type="text" name="Sid" placeholder="ID" required><br>
+  <input type="text" name="Name" placeholder="Student Name" required><br>
+  <input type="text" name="Age" placeholder="Age" required><br>
+  <input type="text" name="Physics" placeholder="Physics" required><br>
+  <input type="text" name="Chemestry" placeholder="Chemestry" required><br>
+  <input type="text" name="Maths" placeholder="Math" required><br>
+  <button type="submit">Add Record</button>
+</form>
+<form action="/students/:id/result" method="GET">
+  <input type="text" placeholder="Student ID">
+  <button type="submit">Search</button>
+
+</form>

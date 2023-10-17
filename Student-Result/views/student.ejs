@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+  <h1>Student Record</h1>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Physics</th>
+        <th scope="col">Chemestry</th>
+        <th scope="col">Maths</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Student.forEach(function(student) { %>
+      <tr>
+        <td> <%= student.Sid %></td>
+        <td><%= student.Name %></td>
+        <td><%= student.Age %></td>
+        <td><%= student.Physics %></td>
+        <td><%= student.Chemestry %></td>
+        <td><%= student.Maths %></td>
+  
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary"><a href="/" style="color: #fff; font-weight: 600; text-decoration: none;">Add New Record</a></button>
+</body>
+</html>
+
